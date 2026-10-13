@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominic's Pizzeria | Authentic Italian Pizza in Medina, OH</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts for authentic Italian bistro typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================================================================== -->
+    <!-- HEADER & NAVIGATION BAR                                              -->
+    <!-- ==================================================================== -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Brand Logo / Shop Name -->
+            <a href="#home" class="logo">Dominic's <span>Pizzeria</span></a>
+            
+            <!-- Main Navigation Menu -->
+            <nav class="site-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#visit">Visit Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ================================================================ -->
+        <!-- 1. HOME / HERO SECTION                                           -->
+        <!-- ================================================================ -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Dominic's Pizzeria</h1>
+                    <p class="tagline">Authentic Italian Taste in the Heart of Medina</p>
+                    <p class="welcome-text">
+                        Welcome to Dominic's! We serve handcrafted, wood-fired pizzas made with fresh local ingredients and traditional Italian recipes passed down through generations.
+                    </p>
+                    <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- FEATURED SPECIALS CARDS                                          -->
+        <!-- ================================================================ -->
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-title">Featured Chef Specials</h2>
+                <p class="section-subtitle">Customer favorites made fresh daily</p>
+                
+                <div class="cards-grid">
+                    <!-- Featured Card 1 -->
+                    <div class="card">
+                        <img src="images/card1.jpg" alt="Classic Margherita Pizza topped with fresh basil leaves and buffalo mozzarella">
+                        <div class="card-body">
+                            <h3 class="card-title">Margherita Classica</h3>
+                            <p class="card-desc">San Marzano tomato sauce, fresh mozzarella di bufala, organic basil, and extra virgin olive oil.</p>
+                            <span class="card-price">$16.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Featured Card 2 -->
+                    <div class="card">
+                        <img src="images/card2.jpg" alt="Spicy Diavola Pepperoni Pizza with chili flakes and hot honey drizzle">
+                        <div class="card-body">
+                            <h3 class="card-title">Diavola Pepperoni</h3>
+                            <p class="card-desc">Artisanal spicy pepperoni, crushed chili flakes, mozzarella, and a drizzle of local hot honey.</p>
+                            <span class="card-price">$18.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Featured Card 3 -->
+                    <div class="card">
+                        <img src="images/card3.jpg" alt="Chilled glass of handcrafted Sicilian Blood Orange Soda garnished with fresh mint">
+                        <div class="card-body">
+                            <h3 class="card-title">Italian Blood Orange Soda</h3>
+                            <p class="card-desc">Refreshing sparkling beverage imported directly from Sicily, served chilled with fresh mint.</p>
+                            <span class="card-price">$4.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- 2. ABOUT US SECTION                                              -->
+        <!-- ================================================================ -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-wrapper">
+                    <!-- Column 1: Text Story -->
+                    <div class="about-text">
+                        <h2 class="section-title text-left">Our Story</h2>
+                        <p>
+                            Founded in 2018 by two passionate Italian immigrants, Dominic and Matteo, Dominic's was born out of a desire to bring genuine Naples-style pizza to Medina, Ohio. 
+                        </p>
+                        <p>
+                            We believe that legendary pizza starts with incredible ingredients. That's why our dough is freshly prepared every morning by our friends at the 
+                            <a href="https://www.medinabakeryexample.com" target="_blank" rel="noopener noreferrer">Medina Artisan Bakery.</a> 
+             
+                
+                        </p>
+
+                        <h3>What Makes Us Special</h3>
+                        <ul class="features-list">
+                            <li><strong>Free High-Speed Wi-Fi:</strong> Great for students, remote work, or hanging out with friends.</li>
+                            <li><strong>Family-Size Seating:</strong> Spacious indoor booths and cozy outdoor seating for group gatherings.</li>
+                            <li><strong>Vegan & Dietary Friendly:</strong> Vegan mozzarella, gluten-free crusts, and dairy-free options available.</li>
+                            <li><strong>Military & Student Discount:</strong> 10% off all orders for active military, veterans, and students.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Image -->
+                    <div class="about-image">
+                        <img src="images/about.jpg" alt="Chef Dominic placing a fresh handmade pizza into a traditional wood-fired brick oven">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- 3. MENU SECTION                                                  -->
+        <!-- ================================================================ -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Our Full Menu</h2>
+                <p class="section-subtitle">Dine-in, takeout, or quick grab & go</p>
+
+                <!-- Weekly Specials Box -->
+                <div class="specials-box">
+                    <h3 class="specials-title">🔥 Weekly Chef Specials 🔥</h3>
+                    <ul class="specials-list">
+                        <li><strong>Margherita Monday:</strong> $3 off any Large Margherita Speciale Pizza</li>
+                        <li><strong>Wine & Knot Wednesday:</strong> Free Garlic Knots with any large specialty pizza</li>
+                        <li><strong>Family Friday:</strong> Buy 2 Large Pizzas, get 2 Italian Sparkling Sodas free</li>
+                    </ul>
+                </div>
+
+                <p class="menu-caption">✨ All pizzas available with gluten free options ✨</p>
+                
+                <div class="table-responsive">
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Description</th>
+                                <th>Size</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="item-name">Margherita Speciale</td>
+                                <td>San Marzano sauce, fresh mozzarella, sweet basil, olive oil</td>
+                                <td>12" / 16"</td>
+                                <td>$14.99 / $18.99</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Medina Supreme Pizza</td>
+                                <td>Pepperoni, Italian sausage, bell peppers, red onions, mushrooms</td>
+                                <td>12" / 16"</td>
+                                <td>$16.99 / $21.99</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Quattro Formaggi</td>
+                                <td>Four cheese blend: Mozzarella, Gorgonzola, Parmesan, Fontina</td>
+                                <td>12" / 16"</td>
+                                <td>$15.99 / $19.99</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Veggie Garden Delight</td>
+                                <td>Spinach, roasted garlic, cherry tomatoes, olives, vegan mozzarella</td>
+                                <td>12" / 16"</td>
+                                <td>$15.50 / $19.50</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Garlic Butter Knots</td>
+                                <td>Warm freshly baked dough knots brushed with garlic butter & parsley</td>
+                                <td>6 Knots</td>
+                                <td>$6.99</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Classic Italian Cannoli</td>
+                                <td>Crisp pastry shells filled with sweet ricotta cream and chocolate chips</td>
+                                <td>2 Pieces</td>
+                                <td>$5.50</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Traditional Tiramisu</td>
+                                <td>Ladyfingers soaked in local espresso, layered with mascarpone cream</td>
+                                <td>Slice</td>
+                                <td>$6.50</td>
+                            </tr>
+                            <tr>
+                                <td class="item-name">Italian Sparkling Soda</td>
+                                <td>Choice of San Pellegrino, Aranciata, or Limonata</td>
+                                <td>Can / Bottle</td>
+                                <td>$3.50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- 4. CUSTOMER REVIEWS SECTION                                      -->
+        <!-- ================================================================ -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+                <p class="section-subtitle">What our Medina community has to say</p>
+
+                <div class="cards-grid">
+                    <!-- Review Card 1 -->
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-quote">"The Margherita pizza takes me right back to my trip to Naples. The crust is incredible, and the staff treats you like family every time you walk in!"</p>
+                        <h3 class="reviewer-name">Maya</h3>
+                        <p class="reviewer-role">Biology Major, Local Resident</p>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-quote">"Best study spot in town! Free Wi-Fi, affordable student discounts, and the Diavola pizza with hot honey is absolutely out of this world."</p>
+                        <h3 class="reviewer-name">Liam</h3>
+                        <p class="reviewer-role">High School Teacher</p>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-quote">"We bring our family here every Friday night. Cozy atmosphere, generous portions, and wonderful vegan options for my daughter."</p>
+                        <h3 class="reviewer-name">Sophia</h3>
+                        <p class="reviewer-role">Medina Business Owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- 5. VISIT US / CONTACT SECTION                                    -->
+        <!-- ================================================================ -->
+        <section id="visit" class="visit-section">
+            <div class="container">
+                <h2 class="section-title">Visit Us & Contact</h2>
+                <p class="section-subtitle">Stop by for a slice or give us a call</p>
+                
+                <div class="visit-grid">
+                    <!-- Column 1: Location & Contact Info -->
+                    <div class="visit-card">
+                        <h3>Location & Info</h3>
+                        <p><strong>Address:</strong> 221 S Jefferson St, Medina, OH 44256</p>
+                        <p><strong>Phone:</strong> <a href="tel:3305550199">(330) 725-8424</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@dominicspizzamedina.com">info@dominicspizzamedina.com</a></p>
+                        
+                        <a href="https://maps.google.com/?q=221+S+Jefferson+St,+Medina,+OH+44256" target="_blank" rel="noopener noreferrer" class="btn btn-directions">
+                            Get Directions 📍
+                        </a>
+
+                        <div class="social-links">
+                            <h4>Join Our Community:</h4>
+                            <a href="#" class="social-btn">Instagram</a>
+                            <a href="#" class="social-btn">Facebook</a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Opening Hours Table -->
+                    <div class="visit-card">
+                        <h3>Weekly Opening Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Sunday-Wednesday</td>
+                                <td>11:00 AM – 11:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>11:00 AM – 11:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Friday-Saturday</td>
+                                <td>11:00 AM – 12:00 AM</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top of page">↑</a>
+
+    <!-- ==================================================================== -->
+    <!-- FOOTER SECTION                                                       -->
+    <!-- ==================================================================== -->
+    <footer class="site-footer" aria-label="Site Footer">
+        <div class="container footer-content">
+            <!-- Column 1: Shop Info -->
+            <div class="footer-col">
+                <h3>Dominic's Pizzeria</h3>
+                <p>Authentic Italian ingredients, handcrafted recipes, and a warm Medina community atmosphere.</p>
+                <p class="footer-address">📍 221 S Jefferson St, Medina, OH 44256</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <nav aria-label="Footer Quick Links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#visit">Visit Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 3: Social & External Links -->
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <ul class="footer-social">
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://maps.google.com/?q=Medina+Public+Square+Medina+OH" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+                    <li><a href="mailto:info@dominicspizzamedina.com">Email Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dominic's Pizzeria. All rights reserved. Built for Introductory Web Development.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

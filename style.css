@@ -1,0 +1,748 @@
+/* ==========================================================================
+   1. GLOBAL STYLES, RESET & ACCESSIBILITY
+   ========================================================================== */
+
+/* Enable smooth scrolling for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Universal box-sizing and margin reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ACCESSIBILITY: Visible high-contrast focus outline for keyboard navigation (:focus-visible) */
+:focus-visible {
+    outline: 3px solid #E29547; /* High contrast caramel outline */
+    outline-offset: 3px;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #FFFAF3; /* Off-white base background */
+    line-height: 1.6;
+}
+
+/* Paragraph spacing and line-height */
+p {
+    line-height: 1.7; /* ACCESSIBILITY: Increased line-height for easier reading */
+}
+
+/* Heading Typography Hierarchy (h1 -> h2 -> h3) */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #4B2E2B; /* Dark Tuscan Brown */
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #1e5631; /* Deep basil green */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #4B2E2B;
+    text-decoration: underline;
+}
+
+/* Reusable Container with generous spacing */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 1.5rem; /* Generous 80px vertical section padding */
+}
+
+/* Section Headings with Thin Brown Accent Line */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #4B2E2B; /* Thin brown accent line */
+}
+
+.section-title.text-left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #555555;
+    margin-top: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Button Component (With min 44px touch target height for mobile accessibility) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* ACCESSIBILITY: Minimum 44px touch target size */
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 30px; /* Fully rounded corners */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #4B2E2B;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(75, 46, 43, 0.3);
+}
+
+/* Primary Button Hover: Darkens and grows slightly */
+.btn-primary:hover {
+    background-color: #321e1c;
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(75, 46, 43, 0.45);
+}
+
+
+/* ==========================================================================
+   2. HEADER & STICKY NAVIGATION
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    position: sticky; /* Header stays locked at top when scrolling */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #4B2E2B;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4B2E2B;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #1e5631;
+    font-weight: 400;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+/* Nav links with animated underline and brown hover state */
+.site-nav a {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+.site-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4B2E2B;
+    transition: width 0.3s ease; /* Animated underline */
+}
+
+.site-nav a:hover {
+    color: #4B2E2B;
+    text-decoration: none;
+}
+
+.site-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   3. HOME / HERO SECTION
+   ========================================================================== */
+.hero-section {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    background-color: #4B2E2B;
+    height: 70vh; /* Taller hero banner */
+    min-height: 480px;
+    position: relative;
+}
+
+/* Semi-transparent dark brown overlay for clear white contrast */
+.hero-overlay {
+    background-color: rgba(75, 46, 43, 0.55);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content .tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #f5ebdd;
+    margin-bottom: 1rem;
+}
+
+.hero-content .welcome-text {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin: 0 auto 2rem auto;
+}
+
+
+/* ==========================================================================
+   4. FEATURED CARDS SECTION (Off-white background #FFFAF3)
+   ========================================================================== */
+.featured-section {
+    background-color: #FFFAF3;
+}
+
+/* Equal-height flex grid */
+.cards-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0d9cf;
+}
+
+/* Hover effect: lifts card 6px and deepens shadow */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(75, 46, 43, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 1.2rem;
+}
+
+.card-price {
+    font-weight: 700;
+    color: #1e5631;
+    font-size: 1.15rem;
+}
+
+
+/* ==========================================================================
+   5. ABOUT US SECTION (Cream background #F5EBDD)
+   ========================================================================== */
+.about-section {
+    background-color: #F5EBDD;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-text h3 {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.features-list {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.features-list li {
+    margin-bottom: 0.5rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    border: 4px solid #ffffff;
+}
+
+
+/* ==========================================================================
+   6. MENU SECTION & WEEKLY SPECIALS (Off-white background #FFFAF3)
+   ========================================================================== */
+.menu-section {
+    background-color: #FFFAF3;
+}
+
+/* NEW: Weekly Specials container box */
+.specials-box {
+    background-color: #F5EBDD;
+    border: 2px dashed #4B2E2B;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.specials-title {
+    font-size: 1.3rem;
+    color: #4B2E2B;
+    margin-bottom: 0.8rem;
+}
+
+.specials-list {
+    list-style: none;
+}
+
+.specials-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+}
+
+.menu-caption {
+    font-style: italic;
+    color: #4B2E2B;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark brown header row with cream text */
+.menu-table th {
+    background-color: #4B2E2B;
+    color: #F5EBDD;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+}
+
+.menu-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #e2dcd5;
+}
+
+.menu-table tbody tr:nth-child(even) {
+    background-color: #faf5ee;
+}
+
+/* Soft brown background highlight on row hover */
+.menu-table tbody tr:hover {
+    background-color: #EAD5C3;
+}
+
+/* Right-align Price column */
+.menu-table th:last-child,
+.menu-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #2b2b2b;
+}
+
+
+/* ==========================================================================
+   7. NEW: CUSTOMER REVIEWS SECTION (Cream background #F5EBDD)
+   ========================================================================== */
+.reviews-section {
+    background-color: #F5EBDD;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0d9cf;
+}
+
+/* ACCESSIBILITY: Amber star rating color ensuring WCAG AA contrast against white */
+.stars {
+    color: #B45309;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.review-quote {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.reviewer-name {
+    font-size: 1.1rem;
+    color: #4B2E2B;
+    margin-bottom: 0.1rem;
+}
+
+.reviewer-role {
+    font-size: 0.85rem;
+    color: #666666;
+    font-weight: 400;
+}
+
+
+/* ==========================================================================
+   8. VISIT US / CONTACT SECTION (Off-white background #FFFAF3)
+   ========================================================================== */
+.visit-section {
+    background-color: #FFFAF3;
+}
+
+/* Two-column layout on desktop */
+.visit-grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.visit-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e0d9cf;
+}
+
+.visit-card h3 {
+    border-bottom: 2px solid #4B2E2B;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.visit-card p {
+    margin-bottom: 0.8rem;
+}
+
+/* Get Directions Button */
+.btn-directions {
+    background-color: #1e5631;
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.btn-directions:hover {
+    background-color: #143d22;
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.03);
+}
+
+.social-links {
+    margin-top: 1.2rem;
+}
+
+.social-links h4 {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px; /* ACCESSIBILITY: Min 44px touch height */
+    padding: 0.4rem 1.2rem;
+    margin-right: 0.5rem;
+    background-color: #1e5631;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.social-btn:hover {
+    background-color: #143d22;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-table td {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #dddddd;
+}
+
+.hours-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #1e5631;
+}
+
+
+/* ==========================================================================
+   9. NEW: BACK TO TOP FLOATING BUTTON
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: #4B2E2B;
+    color: #F5EBDD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background-color: #E29547; /* Caramel hover effect */
+    color: #2A1A18;
+    transform: translateY(-4px);
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   10. FOOTER SECTION (Redesigned 3 Columns)
+   ========================================================================== */
+.site-footer {
+    background-color: #2A1A18; /* Dark brown background */
+    color: #F5EBDD; /* Cream text */
+    padding: 3.5rem 0 1.5rem 0;
+    border-top: 4px solid #4B2E2B;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2.5rem;
+}
+
+.footer-col h3 {
+    color: #F5EBDD;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #E29547;
+    padding-bottom: 0.4rem;
+    display: inline-block;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    color: #e0d5c5;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-col a {
+    color: #F5EBDD; /* Cream link text */
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Links turn caramel (#E29547) on hover */
+.footer-col a:hover {
+    color: #E29547; /* Caramel color on hover */
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #443331;
+    text-align: center;
+    font-size: 0.88rem;
+    color: #b3a594;
+}
+
+
+/* ==========================================================================
+   11. MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+/* Tablet & Small Desktop Screens (below 768px) */
+@media (max-width: 768px) {
+    /* Nav links stack in centered column */
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .site-nav a {
+        min-height: 44px; /* ACCESSIBILITY: 44px touch height */
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Reduce hero text size */
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-content .tagline {
+        font-size: 1.15rem;
+    }
+
+    /* Cards, Visit Us, and Footer collapse to single column */
+    .cards-grid,
+    .about-wrapper,
+    .visit-grid,
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ensure all buttons meet minimum 44px touch size */
+    .btn,
+    .social-btn {
+        width: 100%;
+        min-height: 44px;
+        box-sizing: border-box;
+    }
+}
+
+/* Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+    /* Reduce section vertical padding to 40px */
+    .container {
+        padding: 40px 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    /* Make table font size smaller while keeping horizontal scroll */
+    .menu-table th,
+    .menu-table td {
+        font-size: 0.85rem;
+        padding: 0.8rem 0.6rem;
+    }
+}
